@@ -3,10 +3,11 @@
 #define MAXTIME 30
 #define FREEDAY 7
 int main(){
-    int numexam,i;
-    int examtime[MAXNUM];
-    int examdiff[MAXNUM];
-    int freetime[FREEDAY];
+    int numexam; //number of exams user has
+    int i;
+    int examtime[MAXNUM]; //array to input time until exam for each exam
+    int examdiff[MAXNUM]; //array to input difficulty for each exam
+    int freetime[FREEDAY]; //array to input free time per day of the week to study
 
     /* finding how many exams the student has*/   
     printf("How many exams do you have coming up? ");
@@ -28,9 +29,13 @@ int main(){
                 scanf("%d", &examdiff[i]);}
     }
     /*finding how much free time the user has each day of the week */
-    printf("Now we want to find how much free time you have to study during the week");
-    
+    printf("Now we want to find how much free time you have to study during the week\n");
+    for (i=1; i<=FREEDAY; i++){
+        printf("How much free time do you have on day %d of the week? ", i);
+        scanf("%d", &freetime[i]);
+    }
+/* Now we will create functions*/
 
-}
+
 return(0);
 }
